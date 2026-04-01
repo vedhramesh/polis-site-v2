@@ -812,6 +812,96 @@ nav.scrolled {
   user-select: none;
   pointer-events: none;
 }
+.journal-hero {
+  padding: calc(var(--nav-h) + 5rem) 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.journal-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: end;
+}
+.journal-hero-text-col {
+  padding-bottom: 5rem;
+  position: relative;
+  z-index: 1;
+}
+.journal-big-text {
+  position: relative;
+  text-align: right;
+  padding-bottom: 3rem;
+}
+.journal-big-text .ghost-text {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 12vw, 11rem);
+  font-weight: 300;
+  font-style: italic;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(201, 168, 76, 0.2);
+  line-height: 0.85;
+  user-select: none;
+  display: block;
+}
+.issues-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+}
+.issue-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  min-height: 280px;
+  transition: border-color 0.3s;
+  overflow: hidden;
+}
+.issue-card:hover { border-color: var(--gold); }
+.issue-spine {
+  background: var(--surface-2);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  gap: 1rem;
+}
+.issue-vol {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+.issue-year {
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+.issue-body { padding: 2.5rem; }
+.issue-body h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+.issue-body p { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+.issue-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.issue-tag {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+@media (max-width: 768px) {
+  .journal-hero-inner { grid-template-columns: 1fr; }
+  .journal-big-text { display: none; }
+  .issue-card { grid-template-columns: 80px 1fr; }
+  .issue-spine { padding: 1rem 0.5rem; }
+}
 
 /* ── CALLOUT BANNER ── */
 .callout {
