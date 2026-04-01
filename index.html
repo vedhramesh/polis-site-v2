@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POLIS — Pi Lambda Sigma | University of Pennsylvania</title>
+  <meta name="description" content="Pi Lambda Sigma (POLIS) is the University of Pennsylvania's premier nonpartisan pre-professional government society.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">POLIS <span></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="network.html">Network</a></li>
+        <li><a href="fellows.html">Fellows</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="recruitment.html">Recruitment</a></li>
+        <li><a href="journal.html">Journal</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button class="theme-toggle" aria-label="Toggle light/dark mode">
+          <span class="theme-toggle-thumb"></span>
+          <span class="theme-toggle-icon moon">☾</span>
+          <span class="theme-toggle-icon sun">☀</span>
+        </button>
+        <button class="nav-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="network.html">Network</a>
+    <a href="fellows.html">Fellows</a>
+    <a href="events.html">Events</a>
+    <a href="recruitment.html">Recruitment</a>
+    <a href="journal.html">Journal</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+
+    <!-- Capitol Hill silhouette -->
+    <div class="capitol-silhouette" aria-hidden="true">
+      <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+        <!-- Steps / base -->
+        <rect x="60" y="318" width="680" height="10"/>
+        <rect x="80" y="310" width="640" height="8"/>
+        <rect x="100" y="302" width="600" height="8"/>
+        <!-- Left wing -->
+        <rect x="100" y="210" width="220" height="92"/>
+        <rect x="110" y="198" width="200" height="12"/>
+        <!-- Left wing columns (implied via notches) -->
+        <rect x="120" y="214" width="8" height="80" opacity="0.4"/>
+        <rect x="148" y="214" width="8" height="80" opacity="0.4"/>
+        <rect x="176" y="214" width="8" height="80" opacity="0.4"/>
+        <rect x="204" y="214" width="8" height="80" opacity="0.4"/>
+        <rect x="232" y="214" width="8" height="80" opacity="0.4"/>
+        <rect x="260" y="214" width="8" height="80" opacity="0.4"/>
+        <rect x="288" y="214" width="8" height="80" opacity="0.4"/>
+        <!-- Right wing -->
+        <rect x="480" y="210" width="220" height="92"/>
+        <rect x="490" y="198" width="200" height="12"/>
+        <!-- Right wing columns -->
+        <rect x="494" y="214" width="8" height="80" opacity="0.4"/>
+        <rect x="522" y="214" width="8" height="80" opacity="0.4"/>
+        <rect x="550" y="214" width="8" height="80" opacity="0.4"/>
+        <rect x="578" y="214" width="8" height="80" opacity="0.4"/>
+        <rect x="606" y="214" width="8" height="80" opacity="0.4"/>
+        <rect x="634" y="214" width="8" height="80" opacity="0.4"/>
+        <rect x="662" y="214" width="8" height="80" opacity="0.4"/>
+        <!-- Central portico body -->
+        <rect x="290" y="160" width="220" height="142"/>
+        <rect x="278" y="148" width="244" height="12"/>
+        <!-- Central columns -->
+        <rect x="296" y="164" width="10" height="128" opacity="0.4"/>
+        <rect x="328" y="164" width="10" height="128" opacity="0.4"/>
+        <rect x="360" y="164" width="10" height="128" opacity="0.4"/>
+        <rect x="392" y="164" width="10" height="128" opacity="0.4"/>
+        <rect x="424" y="164" width="10" height="128" opacity="0.4"/>
+        <rect x="456" y="164" width="10" height="128" opacity="0.4"/>
+        <!-- Drum (base of dome) -->
+        <rect x="340" y="96" width="120" height="52"/>
+        <rect x="332" y="88" width="136" height="8"/>
+        <!-- Dome outline (elliptical arc: rx=60, ry=80, peaks at y=16) -->
+        <path d="M340,96 A 60,80 0 0 1 460,96 Z"/>
+        <!-- Lantern -->
+        <rect x="388" y="16" width="24" height="18"/>
+        <rect x="394" y="12" width="12" height="4"/>
+        <!-- Finial -->
+        <rect x="399" y="4" width="2" height="8"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="label">University of Pennsylvania</span>
+        </div>
+        <h1>Pi Lambda<br><em>Sigma</em></h1>
+        <p class="hero-sub">What would happen if we gathered future government leaders in the same room, years before they meet in Washington?</p>
+        <div class="hero-actions">
+          <a href="recruitment.html" class="btn btn-primary">Apply to POLIS</a>
+          <a href="network.html" class="btn btn-outline">Our Network</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <span class="marquee-item">State Department</span>
+      <span class="marquee-item">United Nations</span>
+      <span class="marquee-item">U.S. Congress</span>
+      <span class="marquee-item">CIA</span>
+      <span class="marquee-item">European Parliament</span>
+      <span class="marquee-item">Department of Health and Human Services</span>
+      <span class="marquee-item">Library of Congress</span>
+      <span class="marquee-item">Foreign Policy Research Institute</span>
+      <span class="marquee-item">Templar Baker Group Consulting</span>
+      <span class="marquee-item">Department of the Treasury</span>
+      <span class="marquee-item">Ministry of Foreign Affairs of Japan</span>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="stats-grid reveal">
+        <div class="stat-item">
+          <span class="stat-num" data-count="60" data-suffix="+">0+</span>
+          <span class="stat-label">Fellows</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="2">0</span>
+          <span class="stat-label">Pledge Classes</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="3">0</span>
+          <span class="stat-label">Sister Chapters</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="8">0</span>
+          <span class="stat-label">Government Agencies</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / WHAT WE DO -->
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div>
+          <div class="section-header">
+            <span class="label">What we do</span>
+            <h2>A society built for those who govern</h2>
+            <p>Pi Lambda Sigma (POLIS) is the University of Pennsylvania's premier nonpartisan pre-professional government society, open to all majors and schools and designed for anyone interested in a career in government or public service. We host speaker events, networking events, career workshops, and many fun social gatherings!</p>
+          </div>
+          <a href="recruitment.html" class="btn-ghost">Learn how to apply</a>
+        </div>
+        <div class="card-grid" style="grid-template-columns: 1fr; gap: 1px;">
+          <div class="card reveal reveal-delay-1">
+            <div class="card-icon">◈</div>
+            <h3>Speaker Events</h3>
+            <p>Conversations with senior officials, diplomats, and policy practitioners shaping the world today.</p>
+          </div>
+          <div class="card reveal reveal-delay-2">
+            <div class="card-icon">◎</div>
+            <h3>Networking</h3>
+            <p>Direct access to POLIS alumni working in government, policy, and public service across the United States and internationally.</p>
+          </div>
+          <div class="card reveal reveal-delay-3">
+            <div class="card-icon">◇</div>
+            <h3>Career Development</h3>
+            <p>Workshops, mock interviews, and recruiting pipelines tailored for careers in the government.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- WHAT MAKES POLIS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Our Pillars</span>
+        <h2>What sets POLIS apart</h2>
+      </div>
+      <div class="card-grid">
+        <div class="card reveal reveal-delay-1">
+          <div class="card-icon">Π</div>
+          <h3>Nonpartisan</h3>
+          <p>We believe that effective governance transcends ideology. POLIS brings together students across the political spectrum to engage seriously with policy.</p>
+        </div>
+        <div class="card reveal reveal-delay-2">
+          <div class="card-icon">Λ</div>
+          <h3>Selective</h3>
+          <p>Our fellowship process ensures that every member is genuinely committed to a career in public service — and holds one another accountable to that standard.</p>
+        </div>
+        <div class="card reveal reveal-delay-3">
+          <div class="card-icon">Σ</div>
+          <h3>Connected</h3>
+          <p>POLIS alumni work at the highest levels of the U.S. government and international institutions. This network is active, engaged, and open to current fellows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="callout reveal">
+        <span class="label" style="display:block; margin-bottom: 1rem;">Stay in the loop</span>
+        <h2>Join our mailing list</h2>
+        <p>Get updates on events, recruitment cycles, and everything POLIS — before it hits Instagram.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSczFYKmAfR-e9em0fsbexaH1WnpUkUtWCl-EkOU3zT4IGx6vA/viewform?usp=header" target="_blank" rel="noopener" class="btn btn-primary">Sign Up</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>POLIS</h3>
+          <p>Pi Lambda Sigma — the University of Pennsylvania's premier pre-professional government society.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="network.html">Network</a>
+          <a href="fellows.html">Fellows</a>
+          <a href="events.html">Events</a>
+        </div>
+        <div class="footer-col">
+          <h4>Join</h4>
+          <a href="recruitment.html">Apply</a>
+          <a href="journal.html">POLIS Journal</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSczFYKmAfR-e9em0fsbexaH1WnpUkUtWCl-EkOU3zT4IGx6vA/viewform?usp=header" target="_blank">Mailing List</a>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <a href="https://www.instagram.com/polisupenn/" target="_blank">Instagram</a>
+          <a href="https://www.linkedin.com/company/pi-lambda-sigma-university-of-pennsylvania/" target="_blank">LinkedIn</a>
+          <a href="https://www.facebook.com/polisupenn/" target="_blank">Facebook</a>
+          <a href="https://pennclubs.com/club/pi-lambda-sigma/" target="_blank">Penn Clubs</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Pi Lambda Sigma, University of Pennsylvania. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/polisupenn/" target="_blank" aria-label="Instagram">ig</a>
+          <a href="https://www.linkedin.com/company/pi-lambda-sigma-university-of-pennsylvania/" target="_blank" aria-label="LinkedIn">in</a>
+          <a href="https://www.facebook.com/polisupenn/" target="_blank" aria-label="Facebook">fb</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

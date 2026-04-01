@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POLIS Journal — Pi Lambda Sigma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .journal-hero {
+      padding: calc(var(--nav-h) + 5rem) 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .journal-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: end;
+    }
+    .journal-hero-text-col {
+      padding-bottom: 5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .journal-big-text {
+      position: relative;
+      text-align: right;
+      padding-bottom: 3rem;
+    }
+    .journal-big-text .ghost-text {
+      font-family: var(--font-display);
+      font-size: clamp(5rem, 12vw, 11rem);
+      font-weight: 300;
+      font-style: italic;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(201, 168, 76, 0.2);
+      line-height: 0.85;
+      user-select: none;
+      display: block;
+    }
+    .issue-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      min-height: 280px;
+      transition: border-color 0.3s;
+      overflow: hidden;
+    }
+    .issue-card:hover { border-color: var(--gold); }
+    .issue-spine {
+      background: var(--surface-2);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      gap: 1rem;
+    }
+    .issue-vol {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+    }
+    .issue-year {
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+    }
+    .issue-body { padding: 2.5rem; }
+    .issue-body h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .issue-body p { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .issue-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .issue-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+    @media (max-width: 768px) {
+      .journal-hero-inner { grid-template-columns: 1fr; }
+      .journal-big-text { display: none; }
+      .issue-card { grid-template-columns: 80px 1fr; }
+      .issue-spine { padding: 1rem 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">POLIS <span></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="network.html">Network</a></li>
+        <li><a href="fellows.html">Fellows</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="recruitment.html">Recruitment</a></li>
+        <li><a href="journal.html">Journal</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button class="theme-toggle" aria-label="Toggle light/dark mode">
+          <span class="theme-toggle-thumb"></span>
+          <span class="theme-toggle-icon moon">☾</span>
+          <span class="theme-toggle-icon sun">☀</span>
+        </button>
+        <button class="nav-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="network.html">Network</a>
+    <a href="fellows.html">Fellows</a>
+    <a href="events.html">Events</a>
+    <a href="recruitment.html">Recruitment</a>
+    <a href="journal.html">Journal</a>
+  </div>
+
+  <!-- JOURNAL HERO -->
+  <section class="journal-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container">
+      <div class="journal-hero-inner">
+        <div class="journal-hero-text-col">
+          <span class="label" style="display:block; margin-bottom: 1rem;">Student Publication</span>
+          <h1>The POLIS<br><em>Journal</em></h1>
+          <p style="margin-top: 1.5rem; color: var(--muted); max-width: 480px; font-size: 1.05rem;">Undergraduate research and analysis on government, policy, and international affairs — written by Penn students, edited by POLIS fellows.</p>
+        </div>
+        <div class="journal-big-text">
+          <span class="ghost-text">POLIS</span>
+          <span class="ghost-text">Journal</span>
+        </div>
+      </div>
+    </div>
+    <div style="height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin-top: 4rem;"></div>
+  </section>
+
+  <!-- ISSUES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Issues</span>
+        <h2>Published Editions</h2>
+        <p>Each issue features original research, policy analysis, and commentary from Penn undergraduates across all schools.</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1px; background: var(--border);" class="reveal">
+
+        <div class="issue-card">
+          <div class="issue-spine">
+            <span class="issue-vol">Volume III</span>
+            <span class="issue-year">2026</span>
+          </div>
+          <div class="issue-body">
+            <h3>Issue III — Spring 2026</h3>
+            <div class="issue-tags">
+              <span class="issue-tag">Geopolitics</span>
+              <span class="issue-tag">Economic Policy</span>
+              <span class="issue-tag">National Security</span>
+            </div>
+            <p>The most recent edition featuring undergraduate research on Indo-Pacific strategy, domestic fiscal policy, and AI governance frameworks.</p>
+            <a href="#" class="btn btn-primary" style="font-size: 0.75rem; padding: 0.7rem 1.5rem;">Read Issue</a>
+          </div>
+        </div>
+
+        <div class="issue-card">
+          <div class="issue-spine">
+            <span class="issue-vol">Volume II</span>
+            <span class="issue-year">2025</span>
+          </div>
+          <div class="issue-body">
+            <h3>Issue II — Fall 2025</h3>
+            <div class="issue-tags">
+              <span class="issue-tag">Climate Policy</span>
+              <span class="issue-tag">Intelligence</span>
+              <span class="issue-tag">Trade</span>
+            </div>
+            <p>Analysis of loss and damage financing, AUKUS implications for the Pacific, and the evolving role of intelligence in modern diplomacy.</p>
+            <a href="#" class="btn btn-outline" style="font-size: 0.75rem; padding: 0.7rem 1.5rem;">Read Issue</a>
+          </div>
+        </div>
+
+        <div class="issue-card">
+          <div class="issue-spine">
+            <span class="issue-vol">Volume I</span>
+            <span class="issue-year">2025</span>
+          </div>
+          <div class="issue-body">
+            <h3>Issue I — Spring 2025</h3>
+            <div class="issue-tags">
+              <span class="issue-tag">Democracy</span>
+              <span class="issue-tag">Development</span>
+              <span class="issue-tag">Foreign Policy</span>
+            </div>
+            <p>The inaugural edition of the POLIS Journal, featuring essays on democratic backsliding, post-conflict reconstruction, and U.S. foreign aid reform.</p>
+            <a href="#" class="btn btn-outline" style="font-size: 0.75rem; padding: 0.7rem 1.5rem;">Read Issue</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBMIT -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="callout reveal">
+        <span class="label" style="display:block; margin-bottom: 1rem;">Contribute</span>
+        <h2>Submit to the Journal</h2>
+        <p>Penn undergraduates are encouraged to submit research papers, policy memos, and analytical essays for consideration in future issues. Submissions are reviewed by the POLIS editorial board.</p>
+        <a href="/cdn-cgi/l/email-protection#9aeaf5f6f3e9efeafff4f4dafdf7fbf3f6b4f9f5f7" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>POLIS</h3>
+          <p>Pi Lambda Sigma — the University of Pennsylvania's premier pre-professional government society.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="network.html">Network</a>
+          <a href="fellows.html">Fellows</a>
+          <a href="events.html">Events</a>
+        </div>
+        <div class="footer-col">
+          <h4>Join</h4>
+          <a href="recruitment.html">Apply</a>
+          <a href="journal.html">POLIS Journal</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSczFYKmAfR-e9em0fsbexaH1WnpUkUtWCl-EkOU3zT4IGx6vA/viewform?usp=header" target="_blank">Mailing List</a>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <a href="https://www.instagram.com/polisupenn/" target="_blank">Instagram</a>
+          <a href="https://www.linkedin.com/company/pi-lambda-sigma-university-of-pennsylvania/" target="_blank">LinkedIn</a>
+          <a href="https://www.facebook.com/polisupenn/" target="_blank">Facebook</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Pi Lambda Sigma, University of Pennsylvania. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/polisupenn/" target="_blank" aria-label="Instagram">ig</a>
+          <a href="https://www.linkedin.com/company/pi-lambda-sigma-university-of-pennsylvania/" target="_blank" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script
